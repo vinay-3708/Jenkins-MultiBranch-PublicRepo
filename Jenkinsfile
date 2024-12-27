@@ -5,7 +5,9 @@ pipeline{
             steps{
                 script{
                     echo "Hello"
-                    sh 'echo ${env.BRANCH_NAME}'
+                    sh '''
+                        echo "${env.BRANCH_NAME}"
+                    '''
                 }
             }
         }
